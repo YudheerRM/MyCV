@@ -1,0 +1,85 @@
+/* Custom CSS to enhance Bootstrap */
+:root {
+    --bs-primary: #0066cc;
+    --bs-primary-rgb: 0, 102, 204;
+}
+
+/* Base smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Navbar customization */
+.navbar {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: var(--bs-primary);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 80%;
+    left: 10%;
+}
+
+/* Card enhancements */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Profile image */
+.rounded-circle.img-fluid {
+    border: 4px solid white;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.rounded-circle.img-fluid:hover {
+    transform: scale(1.02);
+}
+
+/* Section headings */
+.display-6 {
+    color: var(--bs-primary);
+}
+
+/* Badge enhancements */
+.badge {
+    padding: 0.5em 1em;
+}
+
+/* Social links */
+.social-links a {
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--bs-primary) !important;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: calc(1.475rem + 2.7vw);
+    }
+}
